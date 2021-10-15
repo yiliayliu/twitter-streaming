@@ -1,0 +1,37 @@
+PUT covid
+{
+    "mappings" : {
+      "_doc":{
+    "properties":
+    {"timestamp_ms": {
+        "type": "date"
+    },
+        "text": {
+        "type": "text"
+    },
+        "coordinates": {
+        "properties": {
+            "coordinates": {
+                "type": "geo_point"
+            },
+            "type": {
+                "type": "keyword"
+            }
+        }
+    },
+        "user": {
+        "properties": {
+            "id": {
+                "type": "long"
+            },
+            "name": {
+                "type": "text"
+            }
+        }
+    },
+        "sentiments": {
+                     "type": "keyword"
+                 }
+    }
+}}
+}
